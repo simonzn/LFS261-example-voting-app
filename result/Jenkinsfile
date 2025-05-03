@@ -35,7 +35,7 @@ pipeline {
         slackSend (channel: "#lfs261", message: "Build Failed: ${env.JOB_NAME} ${env.BUILD_NUMBER}")
       }
       success{
-        slackSend (channel: "#ci-cd", message: "Build Success: ${env.JOB_NAME} ${env.BUILD_NUMBER}")
+        slackSend (channel: "#lfs261", message: "Build Success: ${env.JOB_NAME} ${env.BUILD_NUMBER}")
       }
     }
 }
