@@ -26,6 +26,13 @@ pipeline {
         }
       }
 
+      stage('e2e test'){
+        agent any
+        steps{
+          sh 'sh e2e.sh'
+        }
+      }
+
       stage('build vote app'){
         agent any
         steps{
