@@ -10,7 +10,7 @@ services:
   vote:
     image: simonzn/vote:latest
     ports:
-      - 5000:80
+      - 7000:80
     networks:
       - instavote
     depends_on:
@@ -19,7 +19,7 @@ services:
   result:
     image: simonzn/result:latest
     ports:
-      - 5001:80
+      - 7001:80
     networks:
       - instavote
     depends_on:
