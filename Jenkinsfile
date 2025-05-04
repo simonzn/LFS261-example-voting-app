@@ -17,6 +17,15 @@ pipeline {
         }
       }
 
+      stage('vote integration test'){
+        agent any
+        steps{
+          dir('vote'){
+            sh 'sh integration_test.sh'
+          }
+        }
+      }
+
       stage('build vote app'){
         agent any
         steps{
